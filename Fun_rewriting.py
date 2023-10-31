@@ -475,9 +475,11 @@ if __name__ == "__main__":
                     content = f.read()
                 f.close()
                 tree = parse(content)
-                w = open(handle_file, 'w',encoding = 'utf-8')
-                w.write(tree.as_string())
-                w.close()
+                # unpruned
+                if handle_file.split('/')[-1] not in ["regions.py", "regex.py", "validate.py"]:
+                    w = open(handle_file, 'w',encoding = 'utf-8')
+                    w.write(tree.as_string())
+                    w.close()
   
 
     """Mark useful functions as 1"""
@@ -511,9 +513,11 @@ if __name__ == "__main__":
                     content = f.read()
                 f.close()
                 tree = parse(content)
-                w = open(handle_file, 'w',encoding='utf-8')
-                w.write(tree.as_string())
-                w.close()
+                # unpruned
+                if handle_file.split('/')[-1] not in ["regions.py", "regex.py", "validate.py"]:
+                    w = open(handle_file, 'w',encoding='utf-8')
+                    w.write(tree.as_string())
+                    w.close()
     
 
     import gzip

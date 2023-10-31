@@ -34,7 +34,7 @@ def sortresult(fileinput,input_package, fileoutput):
         # i=i.replace('\n','')
         w.write(i)
         w.write('\n')
-    w.close
+    w.close()
 
 if __name__ == "__main__":
     

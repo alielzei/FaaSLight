@@ -10,7 +10,7 @@ import time
 
 time_start = time.time()
 
-input_package  = "XXXApp_name"
+input_package  = "/Users/alielzein/Desktop/serverless-bert2"
 
 dir_name = input_package.split('/')[-1]
 output_file = "{}/output.json".format(input_package)
@@ -72,7 +72,7 @@ def construct_graph():
                     seedfun_list.append(new_seed)
 
     if not os.path.exists(output_file):
-        os.mknod(output_file)
+        # os.mknod(output_file)
         intial_key={}
         for seed_i in seedfun_list:
             intial_key[seed_i] = []
@@ -273,7 +273,7 @@ if __name__ == "__main__":
 
 
     # Step7: Function-level rewriting
-    print("step8 start")
+    print("step7 start")
     used_fun_result_output_final_re,buits_list_file = func_rewrite()
     print("step7 end")
 

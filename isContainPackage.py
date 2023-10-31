@@ -21,13 +21,15 @@ def getPackgaeName(used_fun_result_output, input_package, output_file):
             rootName = rootName.replace("/",".")
             if rootName not in package_name:
                 package_name.append(rootName)
-        
-    out = open(output_file, 'w', encoding='utf-8')
-    for i in package_name:
-        out.write(i)
-        out.write("\n")
+    
+    # unpruned
+    if output_file.split('/')[-1] not in ["regions.py", "regex.py", "validate.py"]:
+        out = open(output_file, 'w', encoding='utf-8')
+        for i in package_name:
+            out.write(i)
+            out.write("\n")
 
-    out.close()
+        out.close()
 
 
 
