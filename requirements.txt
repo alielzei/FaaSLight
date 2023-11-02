@@ -1,0 +1,3 @@
+PyYAML
+wrapt
+lazy-object-proxy
